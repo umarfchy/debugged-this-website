@@ -127,8 +127,13 @@ searchBtn.addEventListener('click', function () {
   document.querySelector('.main').style.display = 'none';
   clearInterval(timer);
   const search = document.getElementById('search');
-  getImages(search.value)
-  sliders.length = 0;
+  // getImages(search.value)
+  if (search.value === ''){
+    alert('Please give an input')
+  }else{
+    getImages(search.value)
+    sliders.length = 0;
+  }
 })
 
 sliderBtn.addEventListener('click', function () {
