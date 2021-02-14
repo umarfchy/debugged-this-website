@@ -129,9 +129,19 @@ sliderBtn.addEventListener('click', function () {
 
 
 // spinner function
-
 const spinnerToggler = ()=>{
   const spinner = document.getElementById('toggleSpinner');
   spinner.classList.toggle('d-none');
-  console.log('spnner clicked')
 }
+
+// Get the input field
+const inputFiled = document.getElementById("search");
+
+// Execute a function when the user releases a key on the keyboard
+inputFiled.addEventListener("keyup", function(event) {
+  // trigger serach on clicking enter
+  if (event.key === 'Enter') {
+    // Trigger the button element with a click
+    searchBtn.click();
+  }
+});
